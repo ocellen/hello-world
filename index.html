@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #1e293b;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #64748b;
+      margin-bottom: 24px;
+    }
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="greeting">Hello, World!</h1>
+  <p>Welcome to my first webpage.</p>
+  <button onclick="changeGreeting()">Click me</button>
+
+  <script>
+    function changeGreeting() {
+      const greeting = document.getElementById("greeting");
+      greeting.textContent =
+        greeting.textContent === "Hello, World!"
+          ? "Hello, Universe!"
+          : "Hello, World!";
+    }
+  </script>
+</body>
+</html>
